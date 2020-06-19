@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid 19 Tracker</title>
+	<link rel="stylesheet" type="text/css" href="/app.css">
+</head>
+<body>
+	<main>
+		<h2>Covid 19 Tracker for India</h2>
+		<p>This is a webpage for tracking number of cases of Covid 19 (Corona Virus) in India. <br>
+			<h4>Total Statistics</h4>
+			Total Infected : <%= data["data"]["summary"]["total"] %> <br>
+			Total Deaths : <%= data["data"]["summary"]["deaths"] %> <br>
+			Active Cases : <%= data["data"]["summary"]["total"] - data["data"]["summary"]["deaths"] - data["data"]["summary"]["discharged"] %>
+		</p>
+		<form method="get" action="/results">
+			<h4>Choose Region : </h4>
+			<select name = "states" id = "chosen">
+				<option value = 1>Andaman and Nicobar Islands</option>
+				<option value = 2>Andhra Pradesh</option>
+				<option value = 3>Arunachal Pradesh</option>
+				<option value = 4>Assam</option>
+				<option value = 5>Bihar</option>
+				<option value = 6>Chandigarh</option>
+				<option value = 7>Chhattisgarh</option>
+				<option value = 8>Dadar Nagar Haveli</option>
+				<option value = 9>Delhi</option>
+				<option value = 10>Goa</option>
+				<option value = 11>Gujarat</option>
+				<option value = 12>Haryana</option>
+				<option value = 13>Himachal Pradesh</option>
+				<option value = 14>Jammu and Kashmir</option>
+				<option value = 15>Jharkhand</option>
+				<option value = 16>Karnataka</option>
+				<option value = 17>Kerala</option>
+				<option value = 18>Ladakh</option>
+				<option value = 19>Madhya Pradesh</option>
+				<option value = 20>Maharashtra</option>
+				<option value = 21>Manipur</option>
+				<option value = 22>Meghalaya</option>
+				<option value = 23>Mizoram</option>
+				<option value = 24>Nagaland</option>
+				<option value = 25>Odisha</option>
+				<option value = 26>Puducherry</option>
+				<option value = 27>Punjab</option>
+				<option value = 28>Rajasthan</option>
+				<option value = 29>Sikkim</option>
+				<option value = 30>Tamil Nadu</option>
+				<option value = 31>Telengana</option>
+				<option value = 32>Tripura</option>
+				<option value = 33>Uttarakhand</option>
+				<option value = 34>Uttar Pradesh</option>
+				<option value = 35>West Bengal</option>
+			</select>
+			<br><br>
+			<button>Submit</button>
+		</form>
+	</main>
+	<img src="doctor-woman.svg" class="doctor-woman">
+</body>
+</html>

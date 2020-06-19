@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid 19 Tracker</title>
+	<link rel="stylesheet" type="text/css" href="/app.css">
+</head>
+<body>
+	<main>
+		<h2>Covid 19 Tracker for India</h2>
+		<p>This is a webpage for tracking number of cases of Covid 19 (Corona Virus) in India. <br>
+			<h4>Total Statistics</h4>
+			Total Infected : <%= data["data"]["summary"]["total"] %> <br>
+			Total Deaths : <%= data["data"]["summary"]["deaths"] %> <br>
+			Active Cases : <%= data["data"]["summary"]["total"] - data["data"]["summary"]["deaths"] - data["data"]["summary"]["discharged"] %>
+		</p>
+		<h4> <%= data["data"]["regional"][query-1]["loc"] %> Statistics </h4>
+		Total Infected : <%= data["data"]["regional"][query-1]["confirmedCasesIndian"] %> <br>
+		Total Deaths : <%= data["data"]["regional"][query-1]["deaths"] %> 
+	</main>
+	<img src="doctor-woman.svg" class="doctor-woman">
+</body>
+</html>
